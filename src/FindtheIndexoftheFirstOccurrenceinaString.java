@@ -11,10 +11,7 @@ public class FindtheIndexoftheFirstOccurrenceinaString {
         int answer = -1;
 
         for (int i = 0; i < haystack.length(); i++) {
-            if (i + needle.length() > haystack.length()) {
-                break;
-            }
-            if (haystack.substring(i, i + needle.length()).equals(needle)) {
+            if (haystack.startsWith(needle, i)) {
                 answer = i;
                 break;
             }
