@@ -1,3 +1,4 @@
+package Easy_difficulty;
 
 public class FindtheIndexoftheFirstOccurrenceinaString {
     public int strStr(String haystack, String needle) {

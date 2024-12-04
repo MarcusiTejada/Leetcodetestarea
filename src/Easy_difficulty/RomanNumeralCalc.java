@@ -1,3 +1,5 @@
+package Easy_difficulty;
+
 import java.util.HashMap;
 import java.util.Map;
 

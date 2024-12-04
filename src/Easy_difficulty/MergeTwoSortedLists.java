@@ -1,4 +1,6 @@
-package merge;
+package Easy_difficulty;
+
+import Leetcode_classes.ListNode;
 
 public class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {

@@ -1,3 +1,5 @@
+package Easy_difficulty;
+
 public class isPalindrome {
     class Solution {
         public boolean isPalindrome(int x) {

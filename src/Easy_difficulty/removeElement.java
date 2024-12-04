@@ -1,9 +1,11 @@
-public class RemoveDuplicatesfromSortedArray {
-    public int removeDuplicates(int[] nums) {
+package Easy_difficulty;
+
+public class removeElement {
+    public int removeElement(int[] nums, int val) {
         int k = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            if (i + 1 == nums.length || nums[i] != nums[i + 1]) {
+            if (nums[i] != val) {
                 nums[k] = nums[i];
                 k++;
             }

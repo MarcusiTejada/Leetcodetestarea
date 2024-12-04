@@ -1,4 +1,7 @@
-import java.util.*;
+package Easy_difficulty;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSumJavaSolution {
     public int[] twoSum(int[] nums, int target) {

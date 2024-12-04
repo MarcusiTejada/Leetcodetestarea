@@ -1,3 +1,5 @@
+package Easy_difficulty;
+
 public class SearchInsertPosition {
     public static int searchInsert(int[] nums, int target) {
         int left = 0;
