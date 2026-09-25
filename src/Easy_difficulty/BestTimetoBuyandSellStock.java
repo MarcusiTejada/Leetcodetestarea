@@ -1,0 +1,16 @@
+package Easy_difficulty;
+
+public class BestTimetoBuyandSellStock {
+    public int maxProfit(int[] prices) {
+        int min = prices[0], profit = 0;
+        for (int i = 1; i < prices.length; i++) {
+            if (min > prices[i]) {
+                min = prices[i];
+            } else if (profit < (prices[i] - min)) {
+                profit = prices[i] - min;
+            }
+        }
+
+        return profit;
+    }
+}
