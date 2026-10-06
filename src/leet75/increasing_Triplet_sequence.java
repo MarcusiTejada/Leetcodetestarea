@@ -7,19 +7,18 @@ public class increasing_Triplet_sequence {
             return false;
         }
 
-        int first, second = Integer.MAX_VALUE;
+        int first = nums[0], second = Integer.MAX_VALUE;
 
-        for (int i = 0; i < nums.length; i++) {
-            first = nums[i];
-            for (int j = i + 1; j < nums.length; j++) {
-                if (second < nums[j]) {
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > first) {
+                if (second > nums[i]) {
+                    second = nums[i];
+                } else if (second < nums[i]) {
                     return true;
                 }
-                if (first < nums[j] && second > nums[j]) {
-                    second = nums[j];
-                }
+            } else {
+                first = nums[i];
             }
-            second = Integer.MAX_VALUE;
         }
 
         return false;
@@ -27,15 +26,4 @@ public class increasing_Triplet_sequence {
 }
 
 
-/*
- * [1,5,0,4,1,3]
- * first = 1 count = 1 j = 5
- * first = 5 count = 2 j = 0
- * first = 0 count = 2 j = 4
- * first = 4 count = 3 j = 1
- *
- *
- *
- *
- *
- * */
+
