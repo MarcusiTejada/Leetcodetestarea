@@ -1,4 +1,4 @@
-package Easy_difficulty;
+package leet75;
 
 
 import java.util.ArrayList;
