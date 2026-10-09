@@ -5,7 +5,28 @@ import java.util.*;
 
 
 public class find_the_difference_of_two_arrays {
+
+    // Boolean array: values are in [-1000, 1000], so shift by 1000 to index 0..2000
     public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
+        boolean[] seen1 = new boolean[2001];
+        boolean[] seen2 = new boolean[2001];
+
+        for (int x : nums1) seen1[x + 1000] = true;
+        for (int x : nums2) seen2[x + 1000] = true;
+
+        List<Integer> a = new ArrayList<>();
+        List<Integer> b = new ArrayList<>();
+
+        for (int i = 0; i < 2001; i++) {
+            if (seen1[i] && !seen2[i]) a.add(i - 1000);
+            if (seen2[i] && !seen1[i]) b.add(i - 1000);
+        }
+
+        return List.of(a, b);
+    }
+
+    // HashSet version (11ms, beats 42.89%)
+    public List<List<Integer>> findDifferenceHashSet(int[] nums1, int[] nums2) {
 
         List<List<Integer>> res = new ArrayList<>();
         res.add(new ArrayList<>());
